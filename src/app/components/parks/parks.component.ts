@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-parks',
@@ -7,13 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParksComponent implements OnInit {
 
-  public name: string;
+  @Input('namePark') name: string;
   public meters: number;
   public vegetation: string;
   public open: boolean;
 
   constructor() {
-    this.name = 'Zoo';
     this.meters = 1500;
     this.vegetation = 'High';
     this.open = true;

@@ -17,8 +17,11 @@
 </div>
 
 <div>
-  <label>Park name: {{namePark}}</label>
+  <label>Park name:</label>
   <br><b><input type="text" [(ngModel)]="namePark"/></b>
 </div>
 
-<app-parks></app-parks>
+<div *ngIf="namePark || namePark != ''" >
+  <app-parks [namePark]="namePark"></app-parks>
+</div>
+
