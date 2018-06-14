@@ -9,10 +9,12 @@ export class StoreComponent implements OnInit {
 
   public title;
   public items;
+  public namePark: string;
 
   constructor() {
-      this.title = 'This is the store';
+      this.title = 'This is the store component parent';
       this.items = [];
+      this.namePark = '';
    }
 
   ngOnInit() {
