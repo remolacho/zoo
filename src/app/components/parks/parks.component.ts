@@ -5,33 +5,35 @@ import { Component,
          EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-create-parks',
+  selector: 'app-parks',
   templateUrl: './parks.component.html',
   styleUrls: ['./parks.component.css']
 })
 export class ParksComponent implements OnInit {
 
-  @Input('accessToPark') accessToPark: boolean;
+  //@Input('accessToPark') accessToPark: boolean;
 
-  public park: any = {
-    meters: 0,
-    vegetation: '',
-    open: false,
-  };
-
-  @Output() sendData = new EventEmitter();
+  public createPark: boolean = false;
+  public btnText: string = "Nuevo parque"
+  public listPark: any = [];
 
   constructor() {
-    this.park.meters = 1500;
-    this.park.vegetation = 'High';
-    this.park.open = true;
   }
 
   ngOnInit() {
   }
 
-  sendEventPark(){
-    this.sendData.emit(this.park);
+  newPark(){
+    this.createPark = this.createPark ? false : true;
+    this.btnText = this.createPark ? "Ocultar formulario" : "Nuevo parque";
+  }
+
+  getDataPark(data){
+    if(data.success){
+      data.park.id = this.listPark.length + 1; //cargamos el id unico
+      this.listPark.push(data.park);
+      this.newPark();
+    }
   }
 
 }

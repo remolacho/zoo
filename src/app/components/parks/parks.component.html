@@ -1,13 +1,11 @@
-<div *ngIf="accessToPark">
-  <ol>
-    <li>Meters: {{park.meters}}</li>
-    <li>Vegetations: {{park.vegetation}}</li>
-    <li>
-      <span *ngIf="park.open"> Open </span>
-      <span *ngIf="!park.open"> Close </span>
-  </li>
-  </ol>
-  <br>
-  <h3>Crear parque</h3>
-  <button (click)="sendEventPark()">Montrar evento</button>
+<div>
+  <button (click)="newPark()">{{btnText}}</button>
+</div>
+
+<div *ngIf="createPark">
+    <app-create [showForm]="createPark" (sendPark)="getDataPark($event)"></app-create>
+</div>
+
+<div>
+    <app-list-parks [listParks]="listPark"></app-list-parks>
 </div>

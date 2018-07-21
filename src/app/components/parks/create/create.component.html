@@ -1,0 +1,48 @@
+<div>
+
+    <br>
+    <div>
+      <label>Tipo de parque </label>
+      <select [(ngModel)]="park.type">
+          <option [value]="type" *ngFor="let type of typesParks">{{type}}</option>
+      </select>
+    </div>
+
+    <br>
+    <div>
+      <label>Nombre del parque </label>
+      <input name="name" type="text" [(ngModel)]="park.name" />
+    </div>
+    <br>
+
+    <div>
+      <label>Unidad de medida </label>
+      <select [(ngModel)]="park.unit">
+          <option [value]="unit" *ngFor="let unit of unitType">{{unit}}</option>
+      </select>
+    </div>
+
+    <br>
+    <div>
+      <label>Tamaño del parque </label>
+      <input name="size" type="number" [(ngModel)]="park.size" />
+    </div>
+
+    <br>
+    <div>
+      <label>Horario dias: </label>
+      <input name="days" type="text" [(ngModel)]="park.schedule.days" />
+    </div>
+
+    <br>
+    <div>
+        <label>Horario horas: </label>
+        <input name="hours" type="text" [(ngModel)]="park.schedule.hours" />
+    </div>
+
+    <br>
+    <div>
+      <button (click)="savePark()">Salvar datos</button>
+    </div>
+
+</div>

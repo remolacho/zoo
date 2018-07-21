@@ -1,0 +1,19 @@
+<div>
+  <h2>Mi lista de parques</h2>
+  <table border="1">
+    <thead>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Activo</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let park of listParks; let i = index">
+        <td>{{park.id}}</td>
+        <td>{{park.name}}</td>
+        <td>{{park.type}}</td>
+        <td>{{park.active ? "Si" : "No"}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

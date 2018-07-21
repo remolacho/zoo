@@ -18,12 +18,4 @@
 
 <br>
 
-<div>
-  <label>Create park:</label>
-  <br><b><input type="checkbox" [(ngModel)]="accessToPark"/></b>
-</div>
-
-<app-create-parks [accessToPark]="accessToPark"
-(sendData)="getDataPark($event)">
-</app-create-parks>
-
+<app-parks></app-parks>
