@@ -16,12 +16,14 @@
   </table>
 </div>
 
+<br>
+
 <div>
-  <label>Park name:</label>
-  <br><b><input type="text" [(ngModel)]="namePark"/></b>
+  <label>Create park:</label>
+  <br><b><input type="checkbox" [(ngModel)]="accessToPark"/></b>
 </div>
 
-<div *ngIf="namePark || namePark != ''" >
-  <app-parks [namePark]="namePark"></app-parks>
-</div>
+<app-create-parks [accessToPark]="accessToPark"
+(sendData)="getDataPark($event)">
+</app-create-parks>
 

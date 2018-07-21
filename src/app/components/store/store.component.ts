@@ -9,12 +9,14 @@ export class StoreComponent implements OnInit {
 
   public title;
   public items;
-  public namePark: string;
+  public accessToPark: boolean;
+  public genericObject: any;
 
   constructor() {
       this.title = 'This is the store component parent';
       this.items = [];
-      this.namePark = '';
+      this.accessToPark = false;
+      this.genericObject = {}
    }
 
   ngOnInit() {
@@ -24,6 +26,10 @@ export class StoreComponent implements OnInit {
       {id: 3, name: 'Caps'},
       {id: 4, name: 'Flags'},
     ];
+  }
+
+  getDataPark(data){
+    this.genericObject = data;
   }
 
 }

@@ -1,24 +1,37 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component,
+         OnInit,
+         Input,
+         Output,
+         EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-parks',
+  selector: 'app-create-parks',
   templateUrl: './parks.component.html',
   styleUrls: ['./parks.component.css']
 })
 export class ParksComponent implements OnInit {
 
-  @Input('namePark') name: string;
-  public meters: number;
-  public vegetation: string;
-  public open: boolean;
+  @Input('accessToPark') accessToPark: boolean;
+
+  public park: any = {
+    meters: 0,
+    vegetation: '',
+    open: false,
+  };
+
+  @Output() sendData = new EventEmitter();
 
   constructor() {
-    this.meters = 1500;
-    this.vegetation = 'High';
-    this.open = true;
+    this.park.meters = 1500;
+    this.park.vegetation = 'High';
+    this.park.open = true;
   }
 
   ngOnInit() {
+  }
+
+  sendEventPark(){
+    this.sendData.emit(this.park);
   }
 
 }

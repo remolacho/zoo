@@ -1,9 +1,13 @@
-<h2>{{name}}</h2>
-<ol>
-  <li>Meters: {{meters}}</li>
-  <li>Vegetations: {{vegetation}}</li>
-  <li>
-    <span *ngIf="open"> Open </span>
-    <span *ngIf="!open"> Close </span>
-</li>
-</ol>
+<div *ngIf="accessToPark">
+  <ol>
+    <li>Meters: {{park.meters}}</li>
+    <li>Vegetations: {{park.vegetation}}</li>
+    <li>
+      <span *ngIf="park.open"> Open </span>
+      <span *ngIf="!park.open"> Close </span>
+  </li>
+  </ol>
+  <br>
+  <h3>Crear parque</h3>
+  <button (click)="sendEventPark()">Montrar evento</button>
+</div>
