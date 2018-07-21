@@ -15,7 +15,7 @@ export class ParksComponent implements OnInit {
 
   public createPark: boolean = false;
   public btnText: string = "Nuevo parque"
-  public listPark: any = [];
+  public listParks: any = [];
 
   constructor() {
   }
@@ -30,10 +30,14 @@ export class ParksComponent implements OnInit {
 
   getDataPark(data){
     if(data.success){
-      data.park.id = this.listPark.length + 1; //cargamos el id unico
-      this.listPark.push(data.park);
+      data.park.id = this.listParks.length + 1; //cargamos el id unico
+      this.listParks.push(data.park);
       this.newPark();
     }
+  }
+
+  getListParks(data){
+    this.listParks = data.listParks
   }
 
 }

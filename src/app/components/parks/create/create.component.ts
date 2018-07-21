@@ -5,7 +5,7 @@ Output,
 EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-create',
+  selector: 'app-create-park',
   templateUrl: './create.component.html',
 })
 export class CreateComponent implements OnInit {

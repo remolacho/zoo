@@ -3,9 +3,9 @@
 </div>
 
 <div *ngIf="createPark">
-    <app-create [showForm]="createPark" (sendPark)="getDataPark($event)"></app-create>
+    <app-create-park [showForm]="createPark" (sendPark)="getDataPark($event)"></app-create-park>
 </div>
 
 <div>
-    <app-list-parks [listParks]="listPark"></app-list-parks>
+    <app-list-parks [listParks]="listParks" (sendListParks)="getListParks($event)"></app-list-parks>
 </div>

@@ -13,6 +13,7 @@
         <td>{{park.name}}</td>
         <td>{{park.type}}</td>
         <td>{{park.active ? "Si" : "No"}}</td>
+        <td><a (click)="deletePark(park.id)" href="#">Eliminar</a></td>
       </tr>
     </tbody>
   </table>
