@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit, DoCheck {
   public currentContact: any;
 
   constructor() {
-    this.title = "NG ZOO";
+    this.title = 'NG ZOO';
    }
 
   ngOnInit() {
@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit, DoCheck {
     this.currentContact = JSON.parse(localStorage.getItem('contact'));
   }
 
-  logOut(){
+  logOut() {
     localStorage.removeItem('contact');
     localStorage.clear();
     this.currentContact = null;

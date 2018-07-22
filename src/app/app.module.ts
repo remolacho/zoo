@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing, appRoutingProviders } from './app.routing';
 
-//Components
 import { AppComponent } from './app.component';
 import { StoreComponent } from './components/store/store.component';
 import { ParksComponent } from './components/parks/parks.component';

@@ -1,7 +1,6 @@
-import { ModuleWithProviders } from '@angular/core'
-import { Routes, RouterModule } from '@angular/router'
+import { ModuleWithProviders } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-//components
 import { StoreComponent } from './components/store/store.component';
 import { HomeComponent } from './components/home/home.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
@@ -11,13 +10,12 @@ import { AnimalsComponent } from './components/animals/animals.component';
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
-    {path: '', redirectTo: 'home' ,pathMatch: 'full'},
+    {path: '', redirectTo: 'home' , pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
     {path: 'animales', component: AnimalsComponent},
     {path: 'contactos', component: ContactsComponent},
     {path: 'cuidadores', component: KeepersComponent},
     {path: 'tienda', component: StoreComponent},
-    {path: '**', component: HomeComponent},
 ];
 
 export const appRoutingProviders: any[] = [];
