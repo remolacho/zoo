@@ -12,7 +12,10 @@ import { ShowComponent } from './components/parks/show/show.component';
 import { CreateComponent } from './components/parks/create/create.component';
 import { DestroyComponent } from './components/parks/destroy/destroy.component';
 import { ListComponent } from './components/parks/list/list.component';
-import { HomeComponent } from './compoments/home/home.component';
+import { HomeComponent } from './components/home/home.component';
+import { KeepersComponent } from './components/keepers/keepers.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
+import { AnimalsComponent } from './components/animals/animals.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { HomeComponent } from './compoments/home/home.component';
     CreateComponent,
     DestroyComponent,
     ListComponent,
-    HomeComponent
+    HomeComponent,
+    KeepersComponent,
+    ContactsComponent,
+    AnimalsComponent
   ],
   imports: [
     BrowserModule,
