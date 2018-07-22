@@ -1,3 +1,12 @@
-<p>
-  show works!
-</p>
+<div *ngIf="park">
+  <h2>Parque: {{park.name}}</h2>
+  <p>
+    <span>Tamaño: {{park.size}} {{park.unit}}</span>
+  </p>
+  <p>
+    <span>Horario: {{park.schedule.days}} de {{park.schedule.hours}}</span>
+  </p>
+  <p>
+    <span>Este parque es tipo: {{park.type}}</span>
+  </p>
+</div>

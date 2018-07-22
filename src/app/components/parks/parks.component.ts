@@ -1,8 +1,5 @@
 import { Component,
-         OnInit,
-         Input,
-         Output,
-         EventEmitter } from '@angular/core';
+         OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-parks',
@@ -16,6 +13,7 @@ export class ParksComponent implements OnInit {
   public createPark: boolean = false;
   public btnText: string = "Nuevo parque"
   public listParks: any = [];
+  public currentPark: any;
 
   constructor() {
   }
@@ -37,7 +35,12 @@ export class ParksComponent implements OnInit {
   }
 
   getListParks(data){
-    this.listParks = data.listParks
+    this.listParks = data.listParks;
+    this.currentPark = null;
+  }
+
+  getCurrenPark(data){
+    this.currentPark = data.currentPark;
   }
 
 }

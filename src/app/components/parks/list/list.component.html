@@ -6,6 +6,7 @@
       <th>Nombre</th>
       <th>Tipo</th>
       <th>Activo</th>
+      <th width="50%"></th>
     </thead>
     <tbody>
       <tr *ngFor="let park of listParks; let i = index">
@@ -13,7 +14,9 @@
         <td>{{park.name}}</td>
         <td>{{park.type}}</td>
         <td>{{park.active ? "Si" : "No"}}</td>
-        <td><a (click)="deletePark(park.id)" href="#">Eliminar</a></td>
+        <td>
+          <app-destroy-park [listParks]="listParks" [park]="park" (sendListParks)="getListParks($event)"></app-destroy-park> | <a href="#" (click)="showPark(park)">Ver</a>
+        </td>
       </tr>
     </tbody>
   </table>

@@ -20,8 +20,13 @@ export class CreateComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.unitType = ["Kms", "Mts", "Cm", "otros"];
+    this.unitType = ["Km", "Metros", "Cm", "otros"];
     this.typesParks = ["Zoologico", "Botanico", "Mecanico", "Deportivo"];
+    this.initStructPark();
+  }
+
+  public savePark(){
+    this.sendPark.emit({park: this.park, success: true});
     this.initStructPark();
   }
 
@@ -30,7 +35,7 @@ export class CreateComponent implements OnInit {
       id: 0,
       name: "",
       size: 0,
-      unit: "Kms",
+      unit: "Km",
       schedule: {
         days: "",
         hours: "",
@@ -40,9 +45,5 @@ export class CreateComponent implements OnInit {
     }
   }
 
-  public savePark(){
-    this.sendPark.emit({park: this.park, success: true});
-    this.initStructPark();
-  }
 
 }

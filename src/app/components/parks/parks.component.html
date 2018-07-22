@@ -7,5 +7,9 @@
 </div>
 
 <div>
-    <app-list-parks [listParks]="listParks" (sendListParks)="getListParks($event)"></app-list-parks>
+    <app-list-parks [listParks]="listParks" (sendListParks)="getListParks($event)" (sendCurrenPark)="getCurrenPark($event)"></app-list-parks>
+</div>
+
+<div>
+    <app-show-park [park]="currentPark"></app-show-park>
 </div>

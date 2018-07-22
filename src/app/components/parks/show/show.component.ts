@@ -1,14 +1,14 @@
 import { Component,
   OnInit,
-  Input,
-  Output,
-  EventEmitter } from '@angular/core';
+  Input } from '@angular/core';
 
 @Component({
-  selector: 'app-show',
+  selector: 'app-show-park',
   templateUrl: './show.component.html',
 })
 export class ShowComponent implements OnInit {
+
+  @Input("park") park: any;
 
   constructor() { }
 
