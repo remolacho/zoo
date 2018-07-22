@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class KeepersComponent implements OnInit {
 
-  constructor() { }
+  public title;
+
+  constructor() {
+    this.title = 'Cuidadores';
+  }
 
   ngOnInit() {
   }

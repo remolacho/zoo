@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsComponent implements OnInit {
 
-  constructor() { }
+  public title;
+
+  constructor() {
+    this.title = 'Contactos';
+  }
 
   ngOnInit() {
   }

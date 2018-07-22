@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public title;
+
+  constructor() {
+    this.title = 'Home';
+  }
 
   ngOnInit() {
   }
