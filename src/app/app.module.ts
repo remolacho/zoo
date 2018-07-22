@@ -16,6 +16,7 @@ import { KeepersComponent } from './components/keepers/keepers.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { AnimalsComponent } from './components/animals/animals.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HeaderComponent } from './components/header/header.component';
     KeepersComponent,
     ContactsComponent,
     AnimalsComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
