@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit, DoCheck {
   public currentContact: any;
 
   constructor() {
-    this.title = "Mi primera aplicacion angular 2";
+    this.title = "NG ZOO";
    }
 
   ngOnInit() {
