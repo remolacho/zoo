@@ -7,12 +7,19 @@ import { Component, OnInit } from '@angular/core';
 export class ContactsComponent implements OnInit {
 
   public title;
+  public contact: any = {
+    email: ""
+  }
 
   constructor() {
-    this.title = 'Contactos';
+    this.title = 'Contacto';
   }
 
   ngOnInit() {
+  }
+
+  public sendContact() {
+    localStorage.setItem('contact', JSON.stringify(this.contact));
   }
 
 }
