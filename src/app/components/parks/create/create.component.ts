@@ -20,7 +20,7 @@ export class CreateComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.unitType = ["Km", "Metros", "Cm", "otros"];
+    this.unitType = ["Km", "Metros", "Cm", "Otros"];
     this.typesParks = ["Zoologico", "Botanico", "Mecanico", "Deportivo"];
     this.initStructPark();
   }

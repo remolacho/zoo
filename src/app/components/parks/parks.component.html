@@ -6,7 +6,7 @@
     <app-create-park [showForm]="createPark" (sendPark)="getDataPark($event)"></app-create-park>
 </div>
 
-<div>
+<div *ngIf="listParks.length > 0">
     <app-list-parks [listParks]="listParks" (sendListParks)="getListParks($event)" (sendCurrenPark)="getCurrenPark($event)"></app-list-parks>
 </div>
 
