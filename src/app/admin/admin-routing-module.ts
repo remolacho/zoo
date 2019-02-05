@@ -25,5 +25,13 @@ const adminRoutes: Routes = [
     }
 ];
 
-export const appRoutingProviders: any[] = [];
-export const routing: NgModule = RouterModule.forRoot(adminRoutes);
+@NgModule({
+    imports: [
+        RouterModule.forChild(adminRoutes)
+    ],
+    exports: [
+        RouterModule
+    ]
+})
+
+export class AdminRoutingModule { }
