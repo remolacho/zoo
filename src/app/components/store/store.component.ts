@@ -16,7 +16,7 @@ export class StoreComponent implements OnInit {
       this.title = 'This is the store component parent';
       this.items = [];
       this.accessToPark = false;
-      this.genericObject = {}
+      this.genericObject = {};
    }
 
   ngOnInit() {
@@ -28,7 +28,7 @@ export class StoreComponent implements OnInit {
     ];
   }
 
-  getDataPark(data){
+  getDataPark(data) {
     this.genericObject = data;
   }
 

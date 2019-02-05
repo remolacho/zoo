@@ -8,7 +8,7 @@ import { Component,
 })
 export class ShowComponent implements OnInit {
 
-  @Input("park") park: any;
+  @Input('park') park: any;
 
   constructor() { }
 
