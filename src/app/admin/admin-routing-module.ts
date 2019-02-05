@@ -3,9 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Components
 import { MainComponent } from './components/main/main.component';
-import { ListAnimalComponent } from './components/animals/list/list-component';
-import { CreateAnimalComponent } from './components/animals/create/create-component';
-import { EditAnimalComponent } from './components/animals/edit/edit-component';
+import { ListAnimalComponent } from './components/animals/list/list.component';
+import { CreateAnimalComponent } from './components/animals/create/create.component';
+import { EditAnimalComponent } from './components/animals/edit/edit.component';
 
 const adminRoutes: Routes = [
     {
