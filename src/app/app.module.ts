@@ -18,6 +18,8 @@ import { AnimalsComponent } from './components/animals/animals.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import { AdminModule } from './admin/admin-module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,8 @@ import { FooterComponent } from './components/footer/footer.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    AdminModule
   ],
   providers: [
     appRoutingProviders
@@ -47,4 +50,5 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent
   ]
 })
+
 export class AppModule { }
