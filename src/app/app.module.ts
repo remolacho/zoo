@@ -10,7 +10,6 @@ import { ShowComponent } from './components/parks/show/show.component';
 import { CreateComponent } from './components/parks/create/create.component';
 import { DestroyComponent } from './components/parks/destroy/destroy.component';
 import { ListComponent } from './components/parks/list/list.component';
-import { FooterComponent } from './components/footer/footer.component';
 
 import { LandingModule } from './landing-page/landing-module';
 import { AdminModule } from './admin/admin-module';
@@ -23,7 +22,6 @@ import { AdminModule } from './admin/admin-module';
     CreateComponent,
     DestroyComponent,
     ListComponent,
-    FooterComponent
   ],
   imports: [
     BrowserModule,

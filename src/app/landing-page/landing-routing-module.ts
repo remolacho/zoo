@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Components
-import { LayoutComponent } from './components/layout/layout.component';
+import { LayoutComponent } from './components/_landing/layout/layout.component';
 import { HomeComponent } from './components/home/home.component';
 import { StoreComponent } from './components/store/store.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
@@ -12,7 +12,7 @@ import { AnimalsComponent } from './components/animals/animals.component';
 const landingRoutes: Routes = [
     {
         path: '',
-        component: LayoutComponent,
+        component: LayoutComponent, // es el layout todos sus hijos adoptan su comportamiento visual
         children: [
             {path: '', component: HomeComponent, pathMatch: 'full'},
             {path: 'home', component: HomeComponent},

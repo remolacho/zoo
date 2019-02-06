@@ -6,8 +6,9 @@ import { HttpModule } from '@angular/http';
 import { LandingRoutingModule } from './landing-routing-module';
 
 // Components
-import { LayoutComponent } from './components/layout/layout.component';
-import { HeaderComponent } from './components/header/header.component';
+import { LayoutComponent } from './components/_landing/layout/layout.component';
+import { HeaderComponent } from './components/_landing/header/header.component';
+import { FooterComponent } from './components/_landing/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { StoreComponent } from './components/store/store.component';
 import { KeepersComponent } from './components/keepers/keepers.component';
@@ -22,7 +23,8 @@ import { AnimalsComponent } from './components/animals/animals.component';
         StoreComponent,
         KeepersComponent,
         ContactsComponent,
-        AnimalsComponent
+        AnimalsComponent,
+        FooterComponent
     ],
     imports: [
         CommonModule,
