@@ -2,27 +2,24 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // Components
-import { MainComponent } from './components/main/main.component';
+import { LayoutAdminComponent } from './components/_landing/layout/layout.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ListAnimalComponent } from './components/animals/list/list.component';
 import { CreateAnimalComponent } from './components/animals/create/create.component';
 import { EditAnimalComponent } from './components/animals/edit/edit.component';
 
 const adminRoutes: Routes = [
     {
-        path: 'admin-panel',
-        component: MainComponent,
+        path: 'admin',
+        component: LayoutAdminComponent,
         children: [
-            {
-                path: 'lista-animales', component: ListAnimalComponent,
-            },
-            {
-                path: 'nuevo-animal', component: CreateAnimalComponent,
-            },
-            {
-                path: 'editar-animal', component: EditAnimalComponent,
-            },
+            { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+            { path: 'dashboard', component: DashboardComponent},
+            { path: 'lista-animales', component: ListAnimalComponent },
+            { path: 'nuevo-animal', component: CreateAnimalComponent },
+            { path: 'editar-animal', component: EditAnimalComponent },
         ]
-    }
+    },
 ];
 
 @NgModule({
