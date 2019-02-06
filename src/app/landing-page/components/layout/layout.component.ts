@@ -5,6 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './layout.component.html',
 })
 
-export class LandingComponent {
+export class LayoutComponent {
   public title = 'ZOO';
 }
