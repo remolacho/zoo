@@ -8,6 +8,7 @@ import { AdminRoutingModule } from './admin-routing-module';
 // Components
 import { LayoutAdminComponent } from './components/_landing/layout/layout.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AnimalComponent } from './components/animals/animal.component';
 import { ListAnimalComponent } from './components/animals/list/list.component';
 import { CreateAnimalComponent } from './components/animals/create/create.component';
 import { EditAnimalComponent } from './components/animals/edit/edit.component';
@@ -16,6 +17,7 @@ import { EditAnimalComponent } from './components/animals/edit/edit.component';
     declarations: [
         LayoutAdminComponent,
         DashboardComponent,
+        AnimalComponent,
         ListAnimalComponent,
         CreateAnimalComponent,
         EditAnimalComponent,
